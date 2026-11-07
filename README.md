@@ -1,48 +1,42 @@
-![HM-023 engineering portfolio: Software, Security and Systems](assets/banner.svg)
+![HM-023: networks, security and software](assets/banner.png)
 
-# Building software. Understanding systems.
+A collection of network designs, security labs and small applications. Each project links to its code, design decisions and the checks that can be repeated.
 
-I build local software tools and explore how networks and security controls fit together. My work connects implementation with architecture, clear documentation and reproducible checks.
+### Network traffic classification
+**Python · pandas · scikit-learn**
 
-**Software Development · Cybersecurity · Networking · Applied Machine Learning**
+[Network Threat Detection](https://github.com/HM-023/NetworkThreatDetection) — classify labeled flow records and examine per-class errors. The key question is how the choice of holdout changes what an evaluation can tell us.
 
-[Explore repositories](https://github.com/HM-023?tab=repositories) · [Engineering approach](#how-i-work)
+[Training code](https://github.com/HM-023/NetworkThreatDetection/blob/main/src/train.py) · [Evaluation method](https://github.com/HM-023/NetworkThreatDetection/blob/main/docs/evaluation.md)
 
-## Selected Work
+### Three-site network design
+**VLANs · VLSM · OSPF · Packet Tracer design**
 
-Five runnable local workspaces spanning applied ML, network engineering, defensive security and community operations. Each repository includes a dashboard, persistence, meaningful regression checks and an automated browser journey.
+[Enterprise Network Simulation](https://github.com/HM-023/EnterpriseNetworkSimulation) — plan segmentation and addressing for a headquarters and two branches. Includes configuration examples and a later Python subnet planner; simulator execution is still unverified.
 
-| | |
-|:---|:---|
-| [![Network Threat Detection](https://raw.githubusercontent.com/HM-023/NetworkThreatDetection/main/assets/workspace-preview.png)](https://github.com/HM-023/NetworkThreatDetection)<br>**[Network Threat Detection](https://github.com/HM-023/NetworkThreatDetection)**<br>A local ML studio with dataset inspection, three holdout strategies, saved-model prediction and reproducible experiment history.<br><br>**Local ML workspace** | [![Enterprise Network Simulation](https://raw.githubusercontent.com/HM-023/EnterpriseNetworkSimulation/main/assets/workspace-preview.png)](https://github.com/HM-023/EnterpriseNetworkSimulation)<br>**[Enterprise Network Simulation](https://github.com/HM-023/EnterpriseNetworkSimulation)**<br>A working VLSM design planner with gateway-aware allocation, saved designs and per-site configuration exports.<br><br>**Local network planner** |
+[Addressing example](https://github.com/HM-023/EnterpriseNetworkSimulation/blob/main/docs/address-plan.md) · [Connectivity checklist](https://github.com/HM-023/EnterpriseNetworkSimulation/blob/main/docs/verification-plan.md)
 
-| | |
-|:---|:---|
-| [![Defense in Depth Architecture](https://raw.githubusercontent.com/HM-023/DefenseInDepthArchitecture/main/assets/workspace-preview.png)](https://github.com/HM-023/DefenseInDepthArchitecture)<br>**[Defense in Depth Architecture](https://github.com/HM-023/DefenseInDepthArchitecture)**<br>A first-match policy analyzer with access matrices, shadowing warnings and executable allow/deny assertions, plus an EVE-NG reference layout.<br><br>**Local policy analyzer** | [![Authorized Security Assessment Lab](https://raw.githubusercontent.com/HM-023/AuthorizedSecurityAssessmentLab/main/assets/workspace-preview.png)](https://github.com/HM-023/AuthorizedSecurityAssessmentLab)<br>**[Authorized Security Assessment Lab](https://github.com/HM-023/AuthorizedSecurityAssessmentLab)**<br>A persistent assessment workspace with finding lifecycles, retest notes and redacted Markdown/HTML report exports.<br><br>**Local assessment workspace** |
+### Layered network security
+**Security zones · EVE-NG reference layout · Policy tests**
 
-### [Volunteer Management System Design](https://github.com/HM-023/VolunteerManagementSystemDesign)
+[Defense in Depth Architecture](https://github.com/HM-023/DefenseInDepthArchitecture) — connect a segmented design to explicit allow/deny expectations. The policy analyzer checks logical rules; the 11-node layout is a separate lab reference.
 
-[![Volunteer Management System Design](https://raw.githubusercontent.com/HM-023/VolunteerManagementSystemDesign/main/assets/workspace-preview.png)](https://github.com/HM-023/VolunteerManagementSystemDesign)
+[Control matrix](https://github.com/HM-023/DefenseInDepthArchitecture/blob/main/docs/security-controls.md) · [Example policy](https://github.com/HM-023/DefenseInDepthArchitecture/blob/main/examples/workspace-policy.json)
 
-A persistent community operations app with skills-based matching, capacity checks, same-day conflict protection and resource-intent tracking. The earlier C# prototype remains available.
+### Volunteer coordination
+**Systems analysis · C# / Windows Forms · Python · SQLite**
 
-**Python · SQLite · Browser UI · C# reference prototype**
+[Volunteer Management System Design](https://github.com/HM-023/VolunteerManagementSystemDesign) — requirements and use cases, a small Windows prototype, and a later local app for scheduling volunteers and tracking resource pledges.
 
-## Tools in Context
+[Requirements](https://github.com/HM-023/VolunteerManagementSystemDesign/blob/main/docs/requirements.md) · [C# prototype](https://github.com/HM-023/VolunteerManagementSystemDesign/tree/main/prototype)
 
-| Area | Tools and methods used in these projects |
-|:---|:---|
-| Applied ML | Python, pandas, NumPy, scikit-learn, stratified evaluation |
-| Software | Python, SQLite, JavaScript, responsive browser interfaces; C#/.NET prototype |
-| Networking | VLANs, OSPF, address planning, Cisco-style configuration examples |
-| Security | Threat modeling, segmentation, assessment reporting, remediation |
-| Engineering | GitHub Actions, domain regression tests, Playwright browser journeys |
+### Assessment findings and remediation
+**Security assessment · Reporting · Retesting**
 
-## How I Work
+[Authorized Security Assessment Lab](https://github.com/HM-023/AuthorizedSecurityAssessmentLab) — a sanitized methodology case study and a local findings register. Covers how an observation becomes a documented fix and a retest, with fictional examples.
 
-- **Start with the problem.** Make requirements and boundaries clear before choosing tools.
-- **Make it reproducible.** Include setup steps, small examples and useful verification checks.
-- **Show the evidence.** Distinguish working code, proposed architecture and observed results.
-- **Respect the source material.** Keep private data and restricted historical artifacts out of public repositories.
+[Finding categories](https://github.com/HM-023/AuthorizedSecurityAssessmentLab/blob/main/docs/findings.md) · [Report template](https://github.com/HM-023/AuthorizedSecurityAssessmentLab/blob/main/templates/finding-template.md)
 
-The workspaces are local, single-user tools with explicit scope. ML evaluation does not imply real-traffic accuracy, and design/policy outputs do not imply live network enforcement. Project READMEs document those boundaries.
+---
+
+Original work included collaboration. Public repositories use generic examples and separate historical designs from later software extensions. Personal details, source reports and private evidence are excluded.
